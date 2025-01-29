@@ -1,6 +1,60 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;    
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; 
+    position: relative;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: flex-start; 
+    z-index: 1; 
+    margin-left: 50px; 
+    height: 100%; 
+}
+
+.buttons button {
+    margin: 10px 0;
+    padding: 15px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.buttons button:hover {
+    background-color: #444;
 }
