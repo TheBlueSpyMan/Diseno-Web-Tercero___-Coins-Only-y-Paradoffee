@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -36,6 +38,7 @@ width: 100%;
     background-color: black;
     color: aliceblue;
     font-size: 25px;
+    font-family: "Berkshire Swash", serif;
 
     padding: 1rem;
     border-radius: 15px;
