@@ -56,3 +56,43 @@ width: 100%;
 .visible {
     display: block;
 }
+
+/* CHARACTERS */
+
+
+
+/* Slideshow container */
+.character-container {
+    max-width: 720px;
+    position: relative;
+    margin: auto;
+    margin-top: 4em;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.show-slide {
+    display: block;
+}
+
+.hide-slide {
+    display: none;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
