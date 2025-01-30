@@ -49,3 +49,10 @@ width: 100%;
 #button_play {
     margin-top: auto;
 }
+
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
