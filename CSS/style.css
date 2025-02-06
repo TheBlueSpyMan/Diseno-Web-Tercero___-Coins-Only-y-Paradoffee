@@ -26,28 +26,40 @@ width: 100%;
 
 #landing .buttons{
     position: relative;
+    align-items: flex-start;
     width: 100%;
     height: 100vh;
-
     display: flex;
     align-items: center;
-    gap: 10rem;
-    margin-left: 10rem;
     padding-top: 20rem;
+    justify-content: center;
 }
 
-#landing .buttons div{
+#landing .buttons button{
     background-color: black;
     color: aliceblue;
     font-size: 25px;
     font-family: "Berkshire Swash", serif;
-
     padding: 1rem;
     border-radius: 15px;
-    align-items: end;
 }
-#button_play {
-    margin-top: auto;
+
+ #button_play{
+    align-items: flex-end;
+ }
+
+#text-box {
+    position: absolute;
+    margin-left: 76.5rem;
+    transform: translateX(-50%);
+    background-color: #2a2a2a;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "Berkshire Swash", serif;
+    border-radius: 8px;
+    border: 2px solid white;
+    margin-top: 1rem;
 }
 
 .hidden {
