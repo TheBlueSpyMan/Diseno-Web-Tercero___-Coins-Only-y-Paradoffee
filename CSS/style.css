@@ -119,3 +119,101 @@ width: 100%;
         opacity: 1;
     }
 }
+
+
+
+/* ESTO SE TIENE QUE BORRAR */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  #gamebg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+  #traductorContainer {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 300px;
+    height: 200px;
+    transform: translate(-50%, 100%);
+    transition: transform 1s ease;
+    cursor: pointer;
+  }
+  #traductorContainer.visible {
+    transform: translate(-50%, 0);
+  }
+  #traductorContainer.exit {
+    transform: translate(-50%, 100%);
+  }
+  #traductor {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  #text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .star, .rectangle {
+    position: absolute;
+    filter: blur(100px); /* Difuminar los bordes */
+}
+
+/* Estilo de la estrella */
+.star {
+    width: 350px;
+    height: 350px;
+    background-color: yellow;
+    mix-blend-mode: hard-light;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    top: 10px; /* Ajusta según la imagen */
+    left: 280px; /* Ajusta según la imagen */
+    animation: fireEffect 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes fireEffect {
+    0% { transform: scale(1); opacity: 0.8; filter: blur(1000px); }
+    30% { transform: scale(1.1); opacity: 1; filter: blur(1000px); }
+    60% { transform: scale(1.05); opacity: 0.9; filter: blur(1000px); }
+    100% { transform: scale(1); opacity: 0.8; filter: blur(1000px); }
+}
+
+
+.rectangle {
+    width: 280px;
+    height: 600px;
+    mix-blend-mode: hard-light;
+    background-color: rgba(0, 255, 255, 0.5);
+    top: 20px; /* Ajusta según la imagen */
+    left: 1470px; /* Ajusta según la imagen */
+    animation: flicker 0.2s infinite alternate;
+}
+
+
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    25% { opacity: 0.7;}
+    50% { opacity: 0.6; }
+    75% { opacity: 0.7;}
+    100% { opacity: 0.8; }
+}
