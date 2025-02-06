@@ -12,54 +12,64 @@ height: 100vh;
 width: 100%;
 }
 
-#landing{
+#menu{
     width: 100%;
     height: 100%;
 }
 
-#landing img{
+#menu img{
     width: 100vw;
     height: 100vh;
     position: absolute;
-    
 }
 
-#landing .buttons{
+#menu .buttons{
     position: relative;
-    align-items: flex-start;
     width: 100%;
     height: 100vh;
+    padding-top: 38rem;
+    padding-right: 52rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-top: 20rem;
-    justify-content: center;
+    gap: 5rem;
 }
 
-#landing .buttons button{
+#menu .buttons button{
     background-color: black;
     color: aliceblue;
     font-size: 25px;
     font-family: "Berkshire Swash", serif;
     padding: 1rem;
-    border-radius: 15px;
+    border-radius: 4px;
 }
 
- #button_play{
-    align-items: flex-end;
+#menu .buttons #button-play{
+    display: flex;
+    padding: 2rem;
+    font-size: 36px;
+    margin-bottom: 5rem;
+ }
+
+ #menu .buttons .button-information{
+    display: flex;
+    flex-direction: row;
+    gap: 20rem;
+
  }
 
 #text-box {
     position: absolute;
-    margin-left: 76.5rem;
+    margin-left: 96rem;
     transform: translateX(-50%);
-    background-color: #2a2a2a;
+    background-color: #496566;
     color: white;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 30px;
     font-family: "Berkshire Swash", serif;
-    border-radius: 8px;
-    border: 2px solid white;
-    margin-top: 1rem;
+    border-radius: 3px;
+    border: 5px solid rgb(0, 0, 0);
+    margin-top: 2rem;
 }
 
 .hidden {
