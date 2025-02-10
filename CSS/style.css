@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
@@ -7,6 +9,388 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+/* LANDING MAIN*/
+#landing{
+    cursor: url(../Media/Resources/Cursor_apunta.png),auto;
+    background-image: url(../Media/Resources/Ladrillos\ tileables.png);
+    background-repeat: repeat;
+    background-size: 20%;
+    background-position: center;
+    overflow: auto;
+}
+
+#landing .landing_main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    background: linear-gradient(-90deg, rgba(0,0,0,0.75) 0%, rgba(99,99,99,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%), linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%);
+}
+
+#landing .landing_main img{
+    width: 50%;
+}
+
+#landing .landing_main .playdemo{
+    background-color: burlywood;
+    
+    font-size: 45px;
+    color: green;
+
+    padding: 1rem;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-style: solid;
+    filter: drop-shadow(0 0 0.75rem black);
+    
+    font-family: girassol;
+    text-align: center;
+    
+}
+
+/* LANDING GALLERY */
+
+
+
+/* ABOUT US */
+#landing .aboutus{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+    
+    background: linear-gradient(-90deg, rgba(0,0,0,0.75) 0%, rgba(99,99,99,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%), linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%);
+}
+.aboutus h1{
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: .5em;
+    
+    font-size: 48px;
+    color: burlywood;
+    font-family: girassol;
+    -webkit-text-stroke: .01px;
+    -webkit-text-stroke-color: black;
+}
+.aboutus > p{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: roboto;
+    
+}
+
+/* ABOUT US CARDS */
+.aboutuscards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: auto;
+    width: 100%;
+}
+
+.aboutuscards .threecards{
+    display:flex;
+    flex-direction:row;
+    margin-bottom: 3em;
+    gap: 5em;
+
+}
+
+/* ------------------------- */
+
+.creditscard{
+    position: relative;
+    width: 462px;
+    height: 486px;
+}
+
+.creditscard .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.creditscard .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.creditscard .back{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.creditscard .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.creditscard .back {
+    background-image: url(../media/Team/painting_back.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+}
+
+.creditscard .back h1{
+    font-family: "Girassol";
+    justify-content: center;
+    display: flex;
+    margin-top: 1.5em;
+    width: 70%;
+    font-size: 35px;
+}
+
+.creditscard .back a{
+    background-color: #00000052;
+    padding: 0.5em;
+    font-family: "Kanit";
+    width: 30%;
+    margin: 0.2em;
+    color: black;
+    border-radius: 15px;
+}
+
+.creditscard .back a:Hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.creditscard .back h3, p{
+    font-family: "Kanit";
+    margin-top: 0.3em;
+}
+
+.creditscard:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.creditscard:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+
+/* FAQ */
+#landing .faq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-90deg, rgba(0,0,0,0.75) 0%, rgba(99,99,99,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%), linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%);
+}
+
+.faq .faqcontainer{
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5em;
+    margin-right: 5em;
+    margin-left: 5em;
+    align-items: center;
+    gap: 5em; 
+}
+
+.faqcontainer img{
+    max-width: 50%;
+    min-height: auto;    
+}
+.questions{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+#landing .faq h1{
+    margin-top: 1em;
+    font-family: berkshire swash;
+    font-size: 48px;
+    color: burlywood;
+}
+
+
+.questions h2{
+    color: burlywood;
+    font-size: 24px;
+    font-family: roboto;
+}
+.questions p{
+    color:white;
+    font-size: 12px;
+    font-family: roboto;
+}
+
+
+
+/* FORMULARIO */
+.form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background: linear-gradient(-90deg, rgba(0,0,0,0.75) 0%, rgba(99,99,99,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%), linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%);
+}
+.form img{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    width: 15%;
+    height: auto;
+
+}
+
+
+.formulario h1{
+    font-size: 1em;
+    font-family: roboto;
+    width: 100%;
+    max-width: 400px;
+    color: white;
+    text-align: center;
+    color: burlywood;
+    
+}
+
+.formulario{
+    width: 50%;
+    margin-top:5em;
+    margin-bottom: 5em;
+    padding: 1em;
+    
+    display: flex;
+    
+    
+    border: 0.2em solid white;
+    border-radius: 1em;
+
+    filter: drop-shadow(0 0 15rem rgb(0, 0, 0));
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #00000081;
+}
+
+.formulario .cuadro_pregunta{
+    border-radius: 0.3em;  
+}
+
+.formulario .enviar_button{
+    border-radius: 0.3em;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+
+#footer {
+    width: 100%;
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-90deg, rgba(0,0,0,0.75) 0%, rgba(99,99,99,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%), linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%);
+}
+
+#footer .social_media {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+    color: #6b92db;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.social_media div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social_media div i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.copyr {
+    display: flex;
+    gap: 1em;
+    color: rgb(255, 255, 255);
+    font-family: "Source Code Pro";
+    font-size: 12px;
+    margin-bottom: 1em;
+}
+
+#footer .copyr i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyr p {
+    width: 100%;
+    font-family: "Source Code Pro";
+    margin: 0;
+    text-align: center;
+}
+
+.footer a {
+    display: flex;
+    flex: row;
+    gap: 1em;
+    font-family: "Source Code Pro";
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    color: #edf0f1;
+}
+
+.footer a:hover {
+    color: #6b92db;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body{
 height: 100vh;
