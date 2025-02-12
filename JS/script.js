@@ -16,3 +16,25 @@ $(document).ready(function(){
 //         }, 7000);
 //     }, 3000);
 // });
+
+let selectedCharacter = 0; 
+const characterNames = [
+    "Huesito",
+    "Lepion",
+    "Pijus",
+    "Rústica",
+    "Zananejo"
+];
+
+function updateCharacter(characterIndex) {
+    $(".characterMenu").hide();
+    $("#charactermenu-" + characterIndex).show();
+    $("#text-box").text(characterNames[characterIndex - 1]);
+}
+
+$("#select-client").on("click", function() {
+    selectedCharacter = (selectedCharacter % 5) + 1; 
+    updateCharacter(selectedCharacter);
+});
+
+updateCharacter(selectedCharacter);
