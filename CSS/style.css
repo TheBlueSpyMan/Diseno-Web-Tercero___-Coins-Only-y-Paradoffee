@@ -480,9 +480,14 @@ width: 100%;
 
 /* CHARACTERS */
 
+#characters img{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
 
 /* Slideshow container */
-.character-container {
+.characters-container {
     max-width: 720px;
     position: relative;
     margin: auto;
@@ -490,9 +495,9 @@ width: 100%;
 }
 
 /* Hide the images by default */
-.mySlides {
+/* .mySlides {
     display: none;
-}
+} */
 
 .show-slide {
     display: block;

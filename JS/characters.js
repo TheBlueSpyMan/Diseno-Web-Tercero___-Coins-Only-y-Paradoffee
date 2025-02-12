@@ -72,12 +72,10 @@ function showSlide(slideNumber){
     // Ocultamos todos los slides.
     for(i = 0; i < arrSlides.length; i++){
         arrSlides[i].style.display = "none";
-        arrDots[i].className = arrDots[i].className.replace(" active", "");
     }
 
     // Mostramos el slide que corresponda al índice.
     arrSlides[slideIndex - 1].style.display = "block";
-    arrDots[slideIndex - 1].className += " active";
 }
 
 /**
