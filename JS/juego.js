@@ -1,21 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const traductorContainer = document.getElementById("traductorContainer");
-    const text = document.getElementById("text");
-  
+  const minijefe = document.getElementById("minijefe");
+  const traductorContainer = document.getElementById("traductorContainer");
+  const text = document.getElementById("text");
+
+  setTimeout(() => {
+    minijefe.classList.add("visible");
     setTimeout(() => {
       traductorContainer.classList.add("visible");
       setTimeout(() => {
         text.style.display = "block";
       }, 2000);
-    }, 2000);
-  
-    traductorContainer.addEventListener("click", () => {
-      text.style.display = "none";
+    }, 1000);
+  }, 5000);
+
+  traductorContainer.addEventListener("click", () => {
+    text.style.display = "none";
+    setTimeout(() => {
+      traductorContainer.classList.remove("visible");
+      traductorContainer.classList.add("exit");
       setTimeout(() => {
-        traductorContainer.classList.remove("visible");
-        traductorContainer.classList.add("exit");
+        minijefe.classList.remove("visible");
+        minijefe.classList.add("exit");
       }, 2000);
-    });
+    }, 2000);
+  });
+
 
         let star = document.createElement("div");
         star.classList.add("star");

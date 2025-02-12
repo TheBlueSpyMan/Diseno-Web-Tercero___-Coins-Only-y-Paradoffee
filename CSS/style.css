@@ -559,7 +559,7 @@ width: 100%;
 
 
 
-/* ESTO SE TIENE QUE BORRAR */
+/* Juego */
 
 html, body {
     margin: 0;
@@ -575,17 +575,39 @@ html, body {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1;
+    z-index: 0;
+  }
+  #minijefe {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -150%);
+    transition: transform 1s ease;
+    z-index: 1;
+  }
+  #minijefe.visible {
+    transform: translate(-50%, -50%);
+  }
+  #minijefe.exit {
+    transform: translate(-50%, 150%);
+  }
+  #mesa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 2;
   }
   #traductorContainer {
     position: fixed;
     left: 50%;
     bottom: 0;
-    width: 300px;
-    height: 200px;
     transform: translate(-50%, 100%);
     transition: transform 1s ease;
     cursor: pointer;
+    z-index: 3;
   }
   #traductorContainer.visible {
     transform: translate(-50%, 0);
@@ -594,8 +616,6 @@ html, body {
     transform: translate(-50%, 100%);
   }
   #traductor {
-    width: 100%;
-    height: 100%;
     display: block;
   }
   #text {
@@ -604,12 +624,16 @@ html, body {
     top: 50%;
     left: 70%;
     transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
+    color: white;
     font-size: 20px;
     text-align: center;
+    background: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 5px;
   }
+
+
+/* DENTRO DE JUEGO LAS ANIMACIONES DEL FONDO */
 
   .star, .rectangle {
     position: absolute;
