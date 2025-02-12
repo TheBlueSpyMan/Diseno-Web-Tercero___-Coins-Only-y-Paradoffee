@@ -380,7 +380,7 @@
 
 /* MENÚ */
 body{
-height: 100vh;
+height: 100%;
 width: 100%;
 }
 
@@ -480,46 +480,81 @@ width: 100%;
 
 /* CHARACTERS */
 
-#characters img{
-    width: 100vw;
+.character-body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    position: absolute;
+    background-image: url("../Media/Resources/Img/Characters/homeBG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Slideshow container */
-.characters-container {
-    max-width: 720px;
+#characters {
     position: relative;
-    margin: auto;
-    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 80%;
 }
 
-/* Hide the images by default */
-/* .mySlides {
-    display: none;
-} */
-
-.show-slide {
-    display: block;
+#characters h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.hide-slide {
-    display: none;
+.screen-container {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.lever {
+    position: absolute;
+    right: 800px;
+    top: 50%;
+    transform: translateY(-100%) translateX(1600%) rotate(90deg);
+    width: 20px;
+    height: auto;
+    cursor: pointer;
 }
 
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
+.characters-container {
+    position: relative;
+    width: 1000px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.characterCH {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    left: -100%;
+    opacity: 0;
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.characterCH-active {
+    left: 0;
+    opacity: 1;
 }
 
 
