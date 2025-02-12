@@ -577,20 +577,6 @@ html, body {
     object-fit: cover;
     z-index: 0;
   }
-  #minijefe {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -150%);
-    transition: transform 1s ease;
-    z-index: 1;
-  }
-  #minijefe.visible {
-    transform: translate(-50%, -50%);
-  }
-  #minijefe.exit {
-    transform: translate(-50%, 150%);
-  }
   #mesa {
     position: fixed;
     top: 0;
@@ -599,6 +585,28 @@ html, body {
     height: 100vh;
     object-fit: cover;
     z-index: 2;
+  }
+
+  #character {
+    position: fixed;
+    left: 50%;
+    top: -700px; 
+    transform: translate(-50%, -370px);
+    transition: top 1s ease-in-out;
+    z-index: 1;
+  }
+  
+  
+  #character.visible {
+    top: 50%;
+  }
+  
+  #character.exit-up {
+    transform: translate(-50%, -250%);
+  }
+  #character.exit-down {
+    transform: translate(-50%, 150%);
+    transition: top 1s ease-in-out;
   }
   #traductorContainer {
     position: fixed;
@@ -627,7 +635,7 @@ html, body {
     color: white;
     font-size: 20px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0,0,0,0.5);
     padding: 5px 10px;
     border-radius: 5px;
   }

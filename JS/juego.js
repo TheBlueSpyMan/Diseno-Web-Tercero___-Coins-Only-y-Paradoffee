@@ -1,29 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const minijefe = document.getElementById("minijefe");
-  const traductorContainer = document.getElementById("traductorContainer");
-  const text = document.getElementById("text");
+  let selectedCharacter = 1;
+  const characterNames = ["Huesito", "Lepion", "Pijus", "Rústica", "Zananejo"];
 
   setTimeout(() => {
-    minijefe.classList.add("visible");
-    setTimeout(() => {
-      traductorContainer.classList.add("visible");
-      setTimeout(() => {
-        text.style.display = "block";
-      }, 2000);
-    }, 1000);
+    runSequence(1);
   }, 5000);
 
-  traductorContainer.addEventListener("click", () => {
+  function runSequence(seq) {
+    const character = document.getElementById("character");
+    const traductorContainer = document.getElementById("traductorContainer");
+    const text = document.getElementById("text");
+
+    character.className = "";
+    traductorContainer.className = "";
     text.style.display = "none";
+
+    if (seq === 1) {
+      text.innerText = "El texto funciona";
+      character.src = "Media/Characters/Minijefe.png";
+    } else if (seq === 2) {
+      text.innerText = "JODER QUE SI FUNCIONA";
+      character.src = "Media/Characters/" + characterNames[selectedCharacter - 1] + ".png";
+    }
+
     setTimeout(() => {
-      traductorContainer.classList.remove("visible");
-      traductorContainer.classList.add("exit");
+      character.classList.add("visible");
+    }, 0);
+
+    setTimeout(() => {
+      traductorContainer.classList.add("visible");
+    }, 1000);
+
+    setTimeout(() => {
+      text.style.display = "block";
+    }, 3000);
+
+    traductorContainer.addEventListener("click", function handler() {
+      text.style.display = "none";
       setTimeout(() => {
-        minijefe.classList.remove("visible");
-        minijefe.classList.add("exit");
+        traductorContainer.classList.remove("visible");
+        traductorContainer.classList.add("exit");
       }, 2000);
-    }, 2000);
-  });
+      setTimeout(() => {
+        if (seq === 1) {
+          character.classList.add("exit-up");
+        } else if (seq === 2) {
+          character.classList.add("exit-down");
+        }
+      }, 4000);
+      if (seq === 1) {
+        setTimeout(() => {
+          runSequence(2);
+        }, 4000);
+      }
+      traductorContainer.removeEventListener("click", handler);
+    }, {once: true});
+  }
 
 
         let star = document.createElement("div");
