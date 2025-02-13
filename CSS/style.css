@@ -483,25 +483,18 @@
 
 /* CHARACTERS */
 
-.character-body {
+
+#charInfo{
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url("../Media/Resources/Img/Characters/homeBG.png");
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
 
-#characters {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 90%;
-    height: 80%;
 }
 
 #characters h1 {
@@ -518,15 +511,13 @@
     border-radius: 10px;
 }
 
-.screen-container {
+.characters-container{
     position: relative;
-    width: 400px;
-    height: 250px;
-    background: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
+    height: 80%;
 }
+
 
 .lever {
     position: absolute;
@@ -538,17 +529,10 @@
     cursor: pointer;
 }
 
-.characters-container {
-    position: relative;
-    width: 1000px;
-    height: 700px;
-    overflow: hidden;
-}
+
 
 .characterCH {
     position: absolute;
-    width: 100%;
-    height: auto;
     object-fit: contain;
     left: -100%;
     opacity: 0;
@@ -556,8 +540,9 @@
 }
 
 .characterCH-active {
-    left: 0;
+    left: 0%;
     opacity: 1;
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 /* CARTAS METODO DE VENTA */
