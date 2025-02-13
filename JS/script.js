@@ -180,3 +180,24 @@ document.querySelectorAll('.characterMenu').forEach((character) => {
         }
     });
 });
+
+
+
+//MÚSICA
+
+document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById('miAudio');
+    function reproducirAudio() {
+        audio.play().then(() => {
+            console.log('Audio reproduciéndose automáticamente.');
+        }).catch((error) => {
+            console.log('Autoplay bloqueado. Requiere interacción del usuario.');
+        });
+    }
+    reproducirAudio();
+    document.body.addEventListener('click', function() {
+        if (audio.paused) {
+            reproducirAudio();
+        }
+    });
+});
