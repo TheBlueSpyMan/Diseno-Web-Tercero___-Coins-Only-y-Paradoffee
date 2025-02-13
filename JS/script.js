@@ -3,6 +3,26 @@ $(document).ready(function(){
     
 })
 
+
+//MÚSICA
+
+document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById('miAudio');
+    function reproducirAudio() {
+        audio.play().then(() => {
+            console.log('Audio reproduciéndose automáticamente.');
+        }).catch((error) => {
+            console.log('Autoplay bloqueado. Requiere interacción del usuario.');
+        });
+    }
+    reproducirAudio();
+    document.body.addEventListener('click', function() {
+        if (audio.paused) {
+            reproducirAudio();
+        }
+    });
+});
+
 // document.addEventListener("DOMContentLoaded", () => {
 //     const image = document.getElementById("toggleImage");
 //     setTimeout(() => {
@@ -27,8 +47,15 @@ function playClickSound() {
 
 /* DATOS DE LOS PERSONAJES */
 
+let selectedCharacter = localStorage.getItem("selectedCharacter");
 
-selectedCharacter = 0;
+selectedCharacter = selectedCharacter ? parseInt(selectedCharacter) : 0;
+
+console.log("Personaje seleccionado al cargar:", selectedCharacter);
+
+// MIGUEL ESTO LO TIENES QUE PONER EN EL BOTÓN CUANDO QUIERAS QUE SE GUARDE EL DATO
+localStorage.setItem("selectedCharacter", selectedCharacter);
+
 const characterNames = [
     "Huesito",
     "Lepion",
@@ -37,12 +64,16 @@ const characterNames = [
     "Zananejo"
 ];
 
+updateCharacter(selectedCharacter);
+
 function updateCharacter(characterIndex) {
     $(".characterMenu").hide();
     $("#charactermenu-" + characterIndex).show();
     $("#text-box").text(characterNames[characterIndex - 1]);
-    updatePlayButton();
+    
 }
+
+
 
 
 
@@ -66,12 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
 /* CAMBIAR PAGINA A PERSONAJES */
 $("#select-client").on("click", function() {
    playClickSound();
-    setTimeout(() => {
+   selectedCharacter = (selectedCharacter % 5) + 1; 
+   updateCharacter(selectedCharacter);
+    /* setTimeout(() => {
         window.location.href = "characters.html"; 
-    }, 300); 
+    }, 300); */
 });
 
-updateCharacter(selectedCharacter);
+
 
 
 
@@ -183,21 +216,6 @@ document.querySelectorAll('.characterMenu').forEach((character) => {
 
 
 
-//MÚSICA
 
-document.addEventListener('DOMContentLoaded', function() {
-    var audio = document.getElementById('miAudio');
-    function reproducirAudio() {
-        audio.play().then(() => {
-            console.log('Audio reproduciéndose automáticamente.');
-        }).catch((error) => {
-            console.log('Autoplay bloqueado. Requiere interacción del usuario.');
-        });
-    }
-    reproducirAudio();
-    document.body.addEventListener('click', function() {
-        if (audio.paused) {
-            reproducirAudio();
-        }
-    });
-});
+
+updatePlayButton();
