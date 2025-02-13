@@ -19,6 +19,9 @@
     background-position: center;
     overflow: auto;
 }
+#landing .landing_main a{
+    text-decoration: none;
+}
 
 #landing .landing_main{
     width: 100%;
