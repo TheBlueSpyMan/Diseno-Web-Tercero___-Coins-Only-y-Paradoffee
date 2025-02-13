@@ -560,12 +560,100 @@
     opacity: 1;
 }
 
-/* CARTAS */
+/* CARTAS METODO DE VENTA */
 #fondoCartas{
     width: 100%;
     height: 100%;
     position: absolute;
 }
+#cartasContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloCartas{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 60px;
+    font-family: "Berkshire Swash", serif;
+    color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+.shopcard{
+    position: relative;
+    width: 350px;
+    height: 550px;
+}
+
+.shopcard .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+    border: 10px solid black;
+}
+
+.shopcard .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.shopcard .back{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.shopcard .back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+}
+.shopcard .red{
+    background-color: #fb3333 ;
+}
+.shopcard .yellow{
+    background-color:  #fbbb5b ;
+}
+.shopcard .blue{
+    background-color: #3bb3fb ;
+}
+
+.shopcard .darkred{
+    background-color:#b34443 ;
+}
+.shopcard .darkyellow{
+    background-color: #c79652 ;
+}
+.shopcard .darkblue{
+    background-color:#3393c3;
+}
+
+.shopcard p{
+    font-family: "Berkshire Swash", serif;
+    font-size: 30px;
+}
+
+.shopcard.flipped .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.shopcard.flipped .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
 
 
 /* Juego */

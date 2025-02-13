@@ -17,6 +17,8 @@ $(document).ready(function(){
 //     }, 3000);
 // });
 
+/* DATOS DE LOS PERSONAJES */
+
 let selectedCharacter = 0; 
 const characterNames = [
     "Huesito",
@@ -63,3 +65,19 @@ $("#select-client").on("click", function() {
 });
 
 updateCharacter(selectedCharacter);
+
+
+
+/* FLIPEAR CARTAS POR CLICK */
+
+const shopCards = document.querySelectorAll('.shopcard');
+
+shopCards.forEach(card => {
+    card.addEventListener('click', () => {
+        shopCards.forEach(card => card.classList.add('flipped'));
+
+        setTimeout(() => {
+            window.location.href = 'menu.html'; 
+        }, 3000); 
+    });
+});
