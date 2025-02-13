@@ -555,21 +555,33 @@
     display: flex;
     flex-direction: column;
 }
-
-.tituloCartas{
-    width: 100%;
-    height: 100%;
+.contenedor {
     position: relative;
-    font-size: 60px;
+    width: 500px; 
+    height: 130px;
+    background-image: url(../Media/Resources/Img/Game/PapelHud.png); 
+    background-size: cover; 
+    background-position: center; 
+
+}
+#tituloCartas{
+    position: relative;
+    font-size: 50px;
     font-family: "Berkshire Swash", serif;
     color: white;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
+    padding-left: 3rem;
 }
+
+ #threecardsShop{
+    gap:10em;
+ }
+
 .shopcard{
     position: relative;
-    width: 350px;
-    height: 550px;
+    width: 280px;
+    height: 480px;
 }
 
 .shopcard .face{
@@ -583,16 +595,17 @@
     backface-visibility: hidden;
     overflow: hidden;
     transition: .5s;
-    border: 10px solid black;
+    border: 8px solid black;
 }
 
 .shopcard .front{
     transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px #000;
+    box-shadow: 0 10px 30px #000;
 }
 
 .shopcard .back{
     transform: perspective(600px) rotateY(180deg);
+    box-shadow: 0 10px 30px #000;
 }
 
 .shopcard .back {
@@ -607,12 +620,15 @@
     text-align: center;
 }
 .shopcard .red{
+    transform: rotate(5deg);
     background-color: #fb3333 ;
 }
 .shopcard .yellow{
+    transform: rotate(5deg);
     background-color:  #fbbb5b ;
 }
 .shopcard .blue{
+    transform: rotate(-5deg);
     background-color: #3bb3fb ;
 }
 
@@ -636,10 +652,12 @@
 }
 
 .shopcard.flipped .back{
-    transform: perspective(600px) rotateY(360deg);
+    transform: perspective(600px) rotateZ(5deg) rotateY(360deg);
 }
 
-
+.shopcard.flipped .darkblue{
+    transform: perspective(600px) rotateZ(-5deg) rotateY(360deg);
+}
 
 /* Juego */
 
