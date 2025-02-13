@@ -97,11 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
 /* CAMBIAR PAGINA A PERSONAJES */
 $("#select-client").on("click", function() {
    playClickSound();
-   selectedCharacter = (selectedCharacter % 5) + 1; 
-   updateCharacter(selectedCharacter);
-    /* setTimeout(() => {
+    setTimeout(() => {
         window.location.href = "characters.html"; 
-    }, 300); */
+    }, 300); 
 });
 
 
