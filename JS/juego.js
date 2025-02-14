@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
     runSequence(1);
-  }, 5000);
+  }, 4000);
 
   function runSequence(seq) {
     const character = document.getElementById("character");
@@ -22,16 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     text.style.display = "none";
 
     if (seq === 1) {
-      text.innerText = "El texto funciona";
+      text.innerText = "Muy buenas humano inútil, como definitivamente NO ES tu primera vez y DEFINITIVAMENTE te he explicado el juego ya que este es el juego. Me largo para dejarte que juegues tranquilamente... Chaito";
       character.src = "Media/Characters/Minijefe.png";
     } else if (seq === 2) {
-      text.innerText = "JODER QUE SI FUNCIONA";
+      text.innerText = "Uy, hola, muy buenas hoy he venido a comprar algo, sí podría-";
       character.src = "Media/Resources/Img/Characters/" + characterNamesPNG[selectedCharacter-1] + ".png";
     }
 
     setTimeout(() => {
       character.classList.add("visible");
-    }, 0);
+    },1000);
 
     setTimeout(() => {
       traductorContainer.classList.add("visible");
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       text.style.display = "block";
-    }, 3000);
+    });
 
     traductorContainer.addEventListener("click", function handler() {
       text.style.display = "none";
@@ -49,20 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 2000);
       setTimeout(() => {
         if (seq === 1) {
-          character.classList.add("exit-up");
+          character.classList.add("exit-down");
         } else if (seq === 2) {
           character.classList.add("exit-down");
         }
       }, 4000);
       if (seq === 1) {
         setTimeout(() => {
+          character.classList.add("exit-down");
           runSequence(2);
-        }, 4000);
+        }, 8000);
       }
+      
+      
       traductorContainer.removeEventListener("click", handler);
     }, {once: true});
   }
-
 
         let star = document.createElement("div");
         star.classList.add("star");
