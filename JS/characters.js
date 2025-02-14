@@ -5,16 +5,21 @@ const chcharacterNames = {
     "rabanejo": "Rabanejo"
 };
 const leverImages = ["lever", "reverse-lever"];
-const chooseClientButton = document.getElementById('choose-btn');
 let currentIndex = 0;
 let isFlipped = false;
 const charImage = document.querySelector(".ch");
+const clickSound = new Audio('./Media/Sonidos/ClickBoton.mp3');
+
+function playLeverSound() {
+    clickSound.currentTime = 0; 
+    clickSound.play();
+}
 
 function changeCharacter(button) {    
     const leverImage = document.querySelector(".lever"); // Asegúrate de que la imagen tenga la clase "lever"
     if (charImage) {
         // Mover a la izquierda y hacer fade out
-        
+        playLeverSound();
         charImage.style.transform = "translateX(-500px) scale(2)";
         charImage.style.opacity = "0";
         leverImage.src = `Media/Resources/Img/Characters/${leverImages[1]}.png`;
@@ -27,6 +32,7 @@ function changeCharacter(button) {
             charImage.style.transform = "translateX(500px) scale(2)";
             
             setTimeout(() => {
+                playLeverSound();
                 charImage.style.transform = "translateX(0) scale(2)"; // Volver a la posición original
                 charImage.style.opacity = "1"; // Volver a hacer visible
                 leverImage.src = `Media/Resources/Img/Characters/${leverImages[0]}.png`;
