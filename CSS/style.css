@@ -520,67 +520,81 @@
 }
 
 /* CHARACTERS */
+#homeBGImage{
+    width: 100%;
+    height: 100%;
+    position: absolute;    
+}
 
-
-#charInfo{
-    margin: 0;
-    padding: 0;
+.ch-info{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../Media/Resources/Img/Characters/homeBG.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
-#characters h1 {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: bold;
-    width: 300px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.characters-container{
-    position: relative;
+.ch-container, .ch-question, .ch-lever {
     display: flex;
-    width: 90%;
-    height: 80%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
+.ch-question{
+    flex-direction: column;
+    font-size: 24px;
+    font-family: "Berkshire Swash", serif;
+    transform: translate(10%, -5%); /* Lo centra completamente */
+}
 
-.lever {
-    position: absolute;
-    right: 800px;
-    top: 50%;
-    transform: translateY(-100%) translateX(1600%) rotate(90deg);
-    width: 20px;
-    height: auto;
+.choose-btn {
+    margin-top: 20px; /* Espacio entre el h1 y el botón */
+    padding: 15px 20px;
+    background-color: green;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Berkshire Swash", serif;
+    border: none;
     cursor: pointer;
 }
 
-
-
-.characterCH {
-    position: absolute;
-    object-fit: contain;
-    left: -100%;
-    opacity: 0;
-    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+.choose-btn:hover {
+    background-color: darkgreen;
 }
 
-.characterCH-active {
-    left: 0%;
+.ch {
+    width: auto; /* Mantiene el tamaño original de la imagen */
+    height: auto; /* Evita que se deforme */
+    transform: scale(2); /* Duplica el tamaño de la imagen */
+    transform-origin: 25% 50%; /* Asegura que se expanda desde el centro */
     opacity: 1;
-    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
+}
+
+.personaje {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra verticalmente si es necesario */
+    width: 100%; /* Asegura que el contenedor ocupa todo el espacio disponible */
+    height: 100%; 
+}
+
+.ch-lever{
+    justify-content: left;
+    align-content: center;
+}
+.lever{
+    transform: scale(.5) rotate(0.25turn); /* Duplica el tamaño de la imagen */
+    transform-origin: 30% 30%; /* Asegura que se expanda desde el centro */
 }
 
 /* CARTAS METODO DE VENTA */

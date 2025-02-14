@@ -9,71 +9,31 @@
     </head>
     
     
-    <body>
+    <body> 
         
-        <section id="characters">
-            <img id="fondoMenu" src="Media/Resources/Img/Characters/homeBG.png" alt="">
-            <div id="charInfo">
-                <div class="characters-container">
-                
-                    <div class="mySlides fade">
-                        <img class="characterCH" src="Media/Resources/Img/Characters/huesitos.PNG" />
-                    </div>
-    
-                    <div class="mySlides fade">
-                        <img class="characterCH" src="Media/Resources/Img/Characters/leemur.PNG" />
-                    </div>
-    
-                    <div class="mySlides fade">
-                        <img class="characterCH" src="Media/Resources/Img/Characters/piojosa.png" />
-                    </div>
-    
-                    <div class="mySlides fade">
-                        <img class="characterCH" src="Media/Resources/Img/Characters/maricarmen.png" />
-                    </div>
-    
-                    <div class="mySlides fade">
-                        <img class="characterCH" src="Media/Resources/Img/Characters/rabanejo.png" />
-                    </div>
+        <div class="ch-info">
+                <div class="ch-container">                    
+                    <div class="personaje">
+                        <img class="ch" src="Media/Resources/Img/Characters/huesitos.PNG" />
+                    </div>        
                 </div>
-                <div>
+
+                <div class="ch-question">
                     <h1>¿Quieres elegir a este?</h1>
+                    <button class="choose-btn" onclick="saveCharacter()">
+                        <p>¡SÍ! ¡LE AMO!</p>
+                    </button>
                 </div>
-                           
-                <!-- Lever -->
-                <div class="lever" onclick="changeCharacter()">
-                <img src="Media/Resources/Img/Characters/lever.png">
+                
+                <div class="ch-lever" onclick="changeCharacter()">
+                    <img class=lever src="Media/Resources/Img/Characters/lever.png">
                 </div>
-        
-            </div>
-           
-            
-
-            <!-- ShowOptionsButton
-            <div class="characters-options">
-            <img src="Media/Resources/Img/Characters/arrow.png">
-            </div>
-
-             Options container
-            <div class="character-options-container">
-             Full-width images with number and caption text
-                <div class="myOptions">
-                    <div class="optionText">Sonido</div>
-                </div>
-                <div class="myOptions">
-                    <div class="optionText">Color del texto</div>
-                </div>
-                <div class="myOptions">
-                    <div class="optionText">Susto del mago</div>
-                </div>
-            </div>
-            -->
-
-            <!-- SCRIPT PARA SLIDESHOW -->    
+        </div>
 
             <audio id="miAudio"loop autoplay>
                 <source src="Media/Musica/MenuSong.mp3" type="audio/mpeg">
             </audio>
+
         </section>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
