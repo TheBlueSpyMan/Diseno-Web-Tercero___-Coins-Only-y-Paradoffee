@@ -5,11 +5,12 @@ const chcharacterNames = {
     "rabanejo": "Rabanejo"
 };
 const leverImages = ["lever", "reverse-lever"];
+const chooseClientButton = document.getElementById('choose-btn');
 let currentIndex = 0;
 let isFlipped = false;
 const charImage = document.querySelector(".ch");
 
-function changeCharacter() {    
+function changeCharacter(button) {    
     const leverImage = document.querySelector(".lever"); // Asegúrate de que la imagen tenga la clase "lever"
     if (charImage) {
         // Mover a la izquierda y hacer fade out
