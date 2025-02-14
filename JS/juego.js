@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     text.style.display = "none";
 
     if (seq === 1) {
-      text.innerText = "Muy buenas humano inútil, como definitivamente NO ES tu primera vez y DEFINITIVAMENTE te he explicado el juego ya que este es el juego. Me largo para dejarte que juegues tranquilamente... Chaito";
+      text.innerText = "Muy buenas humano inútil, como definitivamente NO ES tu primera vez y DEFINITIVAMENTE te he explicado el juego... me largo para dejarte que juegues tranquilamente... Chaito :)";
       character.src = "Media/Characters/Minijefe.png";
     } else if (seq === 2) {
       text.innerText = "Hola, sé que viniste a jugar el juego, no? Vengo desde las profundidades de tu selección de clientes para darte un consejo para hacer eso...";
