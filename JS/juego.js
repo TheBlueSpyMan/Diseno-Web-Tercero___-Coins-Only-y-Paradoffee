@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
+  const characterNamesPNG = [
+    "huesitos",
+    "leemur",
+    "piojosa",
+    "maricarmen",
+    "rabanejo"
+];
 
   setTimeout(() => {
     runSequence(1);
@@ -18,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       character.src = "Media/Characters/Minijefe.png";
     } else if (seq === 2) {
       text.innerText = "JODER QUE SI FUNCIONA";
-      character.src = "Media/Characters/" + characterNames[selectedCharacter - 1] + ".png";
+      character.src = "Media/Resources/Img/Characters/" + characterNamesPNG[selectedCharacter-1] + ".png";
     }
 
     setTimeout(() => {
