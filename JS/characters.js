@@ -1,7 +1,7 @@
-const images = ["huesitos", "leemur", "maricarmen", "piojosa", "rabanejo"];
+const images = ["huesitos", "leemur",  "piojosa", "maricarmen", "rabanejo"];
 const chcharacterNames = {
     "huesitos": "Huesito",    "leemur": "Leemur",
-    "maricarmen": "Maricarmen",    "piojosa": "Piojosa",
+        "piojosa": "Piojosa", "maricarmen": "Maricarmen",
     "rabanejo": "Rabanejo"
 };
 const leverImages = ["lever", "reverse-lever"];
@@ -35,6 +35,6 @@ function changeCharacter() {
 }
 
 function saveCharacter() {
-    localStorage.setItem("selectedCharacter", currentIndex);
+    localStorage.setItem("selectedCharacter", currentIndex+1);
     window.location.href = "menu.html"; 
 }

@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let selectedCharacter = 1;
-  const characterNames = ["Huesito", "Lepion", "Pijus", "Rústica", "Zananejo"];
 
   setTimeout(() => {
     runSequence(1);
