@@ -1,36 +1,34 @@
 $(document).ready(function(){
     console.log("jQuery Funciona");
     
-    $(".questions p").hide(); // Oculta todas las respuestas al inicio
+    $(".questions p").hide(); 
 
     $(".questions h2").click(function () {
-        // Cierra todas las respuestas menos la seleccionada
         $(".questions p").slideUp();
-        $(".arrow").removeClass("rotate"); // Restaura la flecha original
+        $(".arrow").removeClass("rotate"); 
         
-        // Si la respuesta ya está visible, no la vuelvas a abrir
         if (!$(this).next("p").is(":visible")) {
-            $(this).next("p").slideDown(); // Muestra la respuesta
-            $(this).find(".arrow").addClass("rotate"); // Rota la flecha
+            $(this).next("p").slideDown(); 
+            $(this).find(".arrow").addClass("rotate"); 
         }
     });
 
-    let index = 0; // Índice de la imagen actual
-    const images = $(".carousel-track img"); // Todas las imágenes
-    const totalImages = images.length; // Cantidad de imágenes
+    let index = 0; 
+    const images = $(".carousel-track img");
+    const totalImages = images.length; 
 
     function updateCarousel() {
-        const offset = -index * 100 + "%"; // Calcula el desplazamiento
+        const offset = -index * 100 + "%"; 
         $(".carousel-track").css("transform", "translateX(" + offset + ")");
     }
 
     $(".next").click(function () {
-        index = (index + 1) % totalImages; // Ir a la siguiente imagen (loop infinito)
+        index = (index + 1) % totalImages;
         updateCarousel();
     });
 
     $(".prev").click(function () {
-        index = (index - 1 + totalImages) % totalImages; // Ir a la imagen anterior (loop infinito)
+        index = (index - 1 + totalImages) % totalImages;
         updateCarousel();
     });
 

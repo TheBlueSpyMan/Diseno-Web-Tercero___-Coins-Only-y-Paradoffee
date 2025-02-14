@@ -16,28 +16,25 @@ function playLeverSound() {
 }
 
 function changeCharacter(button) {    
-    const leverImage = document.querySelector(".lever"); // Asegúrate de que la imagen tenga la clase "lever"
+    const leverImage = document.querySelector(".lever"); 
     if (charImage) {
-        // Mover a la izquierda y hacer fade out
         playLeverSound();
         charImage.style.transform = "translateX(-500px) scale(2)";
         charImage.style.opacity = "0";
         leverImage.src = `Media/Resources/Img/Characters/${leverImages[1]}.png`;
-        // Esperar a que termine la animación antes de cambiar la imagen
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % images.length;
             charImage.src = `Media/Resources/Img/Characters/${images[currentIndex]}.png`;
 
-            // Mover hacia la derecha antes de volver a la posición inicial
             charImage.style.transform = "translateX(500px) scale(2)";
             
             setTimeout(() => {
                 playLeverSound();
-                charImage.style.transform = "translateX(0) scale(2)"; // Volver a la posición original
-                charImage.style.opacity = "1"; // Volver a hacer visible
+                charImage.style.transform = "translateX(0) scale(2)"; 
+                charImage.style.opacity = "1"; 
                 leverImage.src = `Media/Resources/Img/Characters/${leverImages[0]}.png`;
-            }, 50); // Pequeño retraso para hacer el cambio más natural
-        }, 500); // Esperar 500ms para cambiar la imagen
+            }, 50); 
+        }, 500); 
     }
 }
 

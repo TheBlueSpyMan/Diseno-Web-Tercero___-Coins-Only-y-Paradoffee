@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           sounds[1].play();
           jumpscare.style.display = "block";
-          jumpscare.classList.add("grow-shrink-animation"); // Agrega la animación
+          jumpscare.classList.add("grow-shrink-animation"); 
           jumpscare.addEventListener('click', function () {
             window.location.href = 'menu.html';
           });

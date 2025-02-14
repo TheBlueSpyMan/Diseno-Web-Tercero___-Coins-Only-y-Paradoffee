@@ -327,7 +327,7 @@
     font-family: "Coiny";
     -webkit-text-stroke: .01px;
     -webkit-text-stroke-color: black;
-    cursor: pointer; /* Para indicar que se puede hacer clic */
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -355,7 +355,7 @@
     color: white;
     font-size: 20px;
     font-family: roboto;
-    display: none; /* Oculta las respuestas por defecto */
+    display: none; 
     padding: 10px;
     border-left: 3px solid burlywood;
     margin-left: 10px;
@@ -451,7 +451,7 @@
     justify-content: center;
     background-color: hsla(0, 0%, 0%, 0.9);
     color: burlywood;
-    padding: 5rem 0 3rem; /* Aumenté el padding superior */
+    padding: 5rem 0 3rem; 
     transition: background 0.5s ease-in-out;
 }
 
@@ -783,11 +783,11 @@
     flex-direction: column;
     font-size: 24px;
     font-family: "Berkshire Swash", serif;
-    transform: translate(10%, -5%); /* Lo centra completamente */
+    transform: translate(10%, -5%); 
 }
 
 .choose-btn {
-    margin-top: 20px; /* Espacio entre el h1 y el botón */
+    margin-top: 20px; 
     padding: 15px 20px;
     background-color: green;
     color: black;
@@ -803,19 +803,19 @@
 }
 
 .ch {
-    width: auto; /* Mantiene el tamaño original de la imagen */
-    height: auto; /* Evita que se deforme */
-    transform: scale(2); /* Duplica el tamaño de la imagen */
-    transform-origin: 25% 50%; /* Asegura que se expanda desde el centro */
+    width: auto; 
+    height: auto; 
+    transform: scale(2); 
+    transform-origin: 25% 50%; 
     opacity: 1;
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
+    transition: transform 0.5s ease, opacity 0.5s ease; 
 }
 
 .personaje {
     display: flex;
-    justify-content: center; /* Centra la imagen horizontalmente */
-    align-items: center; /* Centra verticalmente si es necesario */
-    width: 100%; /* Asegura que el contenedor ocupa todo el espacio disponible */
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
     height: 100%; 
 }
 
@@ -824,8 +824,8 @@
     align-content: center;
 }
 .lever{
-    transform: scale(.5) rotate(0.25turn); /* Duplica el tamaño de la imagen */
-    transform-origin: 30% 30%; /* Asegura que se expanda desde el centro */
+    transform: scale(.5) rotate(0.25turn); 
+    transform-origin: 30% 30%; 
 }
 
 /* CARTAS METODO DE VENTA */
