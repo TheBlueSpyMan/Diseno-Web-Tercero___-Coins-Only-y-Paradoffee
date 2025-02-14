@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 
 *{
     margin: 0;
@@ -39,18 +39,19 @@
 }
 
 #landing .landing_main .playdemo{
-    background-color: burlywood;
+    background-color: wheat ;
     
     font-size: 45px;
-    color: green;
+    color: greenyellow;
 
-    padding: 1rem;
-    border-radius: 15px;
+    padding: .5rem;
+    border-radius: 30px;
     border-color: aliceblue;
     border-style: solid;
     filter: drop-shadow(0 0 0.75rem black);
+    -webkit-text-stroke: 2px #000;
     
-    font-family: girassol;
+    font-family: "Coiny";
     text-align: center;
     
 }
@@ -71,22 +72,27 @@
 }
 .aboutus h1{
     text-align: center;
-    margin-top: 2em;
-    margin-bottom: .5em;
+    margin-top: 1em;
+    margin-bottom: .2em;
     
-    font-size: 48px;
+    font-size: 80px;
     color: burlywood;
-    font-family: girassol;
+    font-family: "Coiny";
     -webkit-text-stroke: .01px;
     -webkit-text-stroke-color: black;
 }
+
 .aboutus > p{
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 2em;
-    text-align: center;
+    text-align:center;
     color: rgb(255, 255, 255);
+    font-size: 24px;
     font-family: roboto;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    padding: 1rem;
+    border-radius: 15px;
     
 }
 
@@ -106,6 +112,8 @@
     flex-direction:row;
     margin-bottom: 3em;
     gap: 5em;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
@@ -113,8 +121,8 @@
 
 .creditscard{
     position: relative;
-    width: 462px;
-    height: 486px;
+    width: 331px;
+    height: 343px;
 }
 
 .creditscard .face{
@@ -145,6 +153,7 @@
 
 .creditscard .back {
     background-image: url(../media/Team/painting_back.png);
+    background-size: 331px 343px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,17 +166,20 @@
 
 .creditscard .back h1{
     font-family: "Girassol";
+    color: black;
     justify-content: center;
     display: flex;
     margin-top: 1.5em;
     width: 70%;
-    font-size: 35px;
+    font-size: 18px;
 }
 
 .creditscard .back a{
     background-color: #00000052;
-    padding: 0.5em;
-    font-family: "Kanit";
+    padding: 1em;
+    text-align: center;
+    font-family: "roboto";
+    font-size: 12px;
     width: 30%;
     margin: 0.2em;
     color: black;
@@ -179,7 +191,7 @@
 }
 
 .creditscard .back h3, p{
-    font-family: "Kanit";
+    font-family: "roboto";
     margin-top: 0.3em;
 }
 
@@ -210,94 +222,116 @@
     margin-right: 5em;
     margin-left: 5em;
     align-items: center;
+    justify-content: center;
     gap: 5em; 
 }
 
-.faqcontainer img{
-    max-width: 50%;
-    min-height: auto;    
+#landing .faq h1{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: .2em;
+    
+    font-size: 80px;
+    color: burlywood;
+    font-family: "Coiny";
+    -webkit-text-stroke: .01px;
+    -webkit-text-stroke-color: black;
 }
+
 .questions{
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
-#landing .faq h1{
-    margin-top: 1em;
-    font-family: berkshire swash;
-    font-size: 48px;
-    color: burlywood;
-}
-
 
 .questions h2{
+    font-size: 28px;
     color: burlywood;
-    font-size: 24px;
-    font-family: roboto;
+    font-family: "Coiny";
+    -webkit-text-stroke: .01px;
+    -webkit-text-stroke-color: black;
 }
+
 .questions p{
     color:white;
-    font-size: 12px;
+    font-size: 20px;
     font-family: roboto;
 }
 
+.faqcontainer img{
+    max-width: 50%;
+    height: auto;    
+}
 
 
 /* FORMULARIO */
 .form{
     width: 100%;
+    height: auto;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content:space-around;
     background: linear-gradient(-90deg, rgba(0,0,0,0.75) 0%, rgba(99,99,99,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%), linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,0.75) 100%);
 }
+
 .form img{
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin: 2rem;
     width: 15%;
     height: auto;
-
 }
 
 
-.formulario h1{
-    font-size: 1em;
-    font-family: roboto;
+.form h1{
+    margin-top: .5em;
+    font-size: 80px;
+    font-family: "Coiny";
     width: 100%;
-    max-width: 400px;
     color: white;
     text-align: center;
-    color: burlywood;
-    
+    color: burlywood;    
 }
 
 .formulario{
-    width: 50%;
-    margin-top:5em;
+    width: 100%;
+    margin-top: 1em;
     margin-bottom: 5em;
     padding: 1em;
     
     display: flex;
-    
-    
-    border: 0.2em solid white;
-    border-radius: 1em;
-
-    filter: drop-shadow(0 0 15rem rgb(0, 0, 0));
-    flex-direction: column;
-
+    flex-direction: row;
+            
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
-    background-color: #00000081;
+}
+
+.formulario form{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .formulario .cuadro_pregunta{
-    border-radius: 0.3em;  
+    width: 100%;
+    height: 3em;
+    border-radius: 15px;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    text-align: center;
+    align-content: center;
 }
 
+
 .formulario .enviar_button{
-    border-radius: 0.3em;
+    width: 25%;
+    height: 2em;
+    font-size: 24px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
 }
 
 
