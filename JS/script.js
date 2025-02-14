@@ -15,9 +15,6 @@ $(document).ready(function(){
         }
     });
 
-
-})
-$(document).ready(function () {
     let index = 0; // Índice de la imagen actual
     const images = $(".carousel-track img"); // Todas las imágenes
     const totalImages = images.length; // Cantidad de imágenes
@@ -36,7 +33,10 @@ $(document).ready(function () {
         index = (index - 1 + totalImages) % totalImages; // Ir a la imagen anterior (loop infinito)
         updateCarousel();
     });
-});
+
+
+})
+
 
 
 //MÚSICA
